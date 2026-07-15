@@ -3,39 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>똥피하기</title>
+<title>업무 관리</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="game-container">
-    <!-- 타이틀 화면 -->
-    <div id="title-screen" class="screen">
-      <h1>💩 똥피하기</h1>
-      <p class="best-score">최고 점수: <span id="title-best-score">0</span></p>
-      <button id="start-btn">시작하기</button>
-      <p class="hint">← → 또는 A / D 로 이동</p>
+  <div id="app">
+    <header>
+      <h1>업무 관리</h1>
+      <p class="subtitle">할 일을 추가하고 상태를 관리하세요</p>
+    </header>
+
+    <form id="add-form">
+      <input type="text" id="task-input" placeholder="새 업무를 입력하세요" maxlength="200" required>
+      <button type="submit">추가</button>
+    </form>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="todo">대기</button>
+      <button class="filter-btn" data-filter="doing">진행중</button>
+      <button class="filter-btn" data-filter="done">완료</button>
     </div>
 
-    <!-- 게임 화면 -->
-    <div id="game-screen" class="screen hidden">
-      <div id="hud">
-        <div id="lives"></div>
-        <div id="score">0</div>
-      </div>
-      <canvas id="game-canvas"></canvas>
-    </div>
+    <ul id="task-list"></ul>
 
-    <!-- 게임 오버 화면 -->
-    <div id="gameover-screen" class="screen hidden">
-      <h2>게임 오버</h2>
-      <p>최종 점수: <span id="final-score">0</span></p>
-      <p id="new-record" class="hidden">🎉 최고 기록 갱신!</p>
-      <p class="best-score">최고 점수: <span id="gameover-best-score">0</span></p>
-      <button id="retry-btn">다시하기</button>
-      <button id="title-btn">타이틀로</button>
-    </div>
+    <p id="empty-message" class="hidden">등록된 업무가 없습니다.</p>
   </div>
 
-  <script src="game.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
