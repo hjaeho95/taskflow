@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+
+# Env
+.env
+.env.local
+
+# Logs
+*.log
+
+# Claude Code local artifacts
+.claude/settings.local.json
+.tmp/
+.playwright-mcp/
