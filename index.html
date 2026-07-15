@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>똥피하기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- 타이틀 화면 -->
+    <div id="title-screen" class="screen">
+      <h1>💩 똥피하기</h1>
+      <p class="best-score">최고 점수: <span id="title-best-score">0</span></p>
+      <button id="start-btn">시작하기</button>
+      <p class="hint">← → 또는 A / D 로 이동</p>
+    </div>
+
+    <!-- 게임 화면 -->
+    <div id="game-screen" class="screen hidden">
+      <div id="hud">
+        <div id="lives"></div>
+        <div id="score">0</div>
+      </div>
+      <canvas id="game-canvas"></canvas>
+    </div>
+
+    <!-- 게임 오버 화면 -->
+    <div id="gameover-screen" class="screen hidden">
+      <h2>게임 오버</h2>
+      <p>최종 점수: <span id="final-score">0</span></p>
+      <p id="new-record" class="hidden">🎉 최고 기록 갱신!</p>
+      <p class="best-score">최고 점수: <span id="gameover-best-score">0</span></p>
+      <button id="retry-btn">다시하기</button>
+      <button id="title-btn">타이틀로</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
