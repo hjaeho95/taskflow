@@ -21,6 +21,10 @@ npm-debug.log*
 dist/
 build/
 
+# Test artifacts
+test-results/
+playwright-report/
+
 # Claude Code local artifacts
 .claude/settings.local.json
 .tmp/
